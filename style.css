@@ -41,7 +41,7 @@ header{
     transition: all .55s ease;
 }
 
-.navlist a:hover {
+.navlist a:hover, #scroll-up-link a:hover {
     color:#cb1711;
     border-bottom: 2px solid #cb1711;
 }
@@ -187,15 +187,16 @@ section {
     right: 100px;
     text-align: center;
     border-radius: 10px;
-    background: pink;
+    background: transparent;
     padding-bottom: 50px;
     transition: all .55s ease;
 }
 
 #scroll-up-link a {
-    margin-left: 0;
     display: block;
     margin: 7px 0;
+    margin-left: 15px;
+    width: 90px;
 }
 
 
