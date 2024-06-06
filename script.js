@@ -5,14 +5,23 @@ const sr = ScrollReveal ({
     reset: true
 });
 
-sr.reveal('.jewelery-text', {delay:200, origin:'top'})
-sr.reveal('.jewelery-logo', {delay:450, origin:'top'})
-sr.reveal('.icons', {delay:450, origin:'left'})
+sr.reveal('.jewelery-text', {delay:200, origin:'top'});
+sr.reveal('.jewelery-logo', {delay:450, origin:'top'});
+sr.reveal('.icons', {delay:450, origin:'left'});
 
-let scrollUp = document.querySelector('.scroll-up')
-let scrollUpBar = document.querySelector('.scroll-up-bar')
+let scrollUp = document.querySelector('.scroll-up');
+let scrollUpBar = document.getElementById('scroll-up-link');
 
-scrollUp.onclick = () => {
-    scrollUp.classList.toggle('bx-x');
-    scrollUpBar.classList.toggle('open');
-}
+scrollUp.addEventListener("click", function() {
+    if (scrollUpBar.className == 'hide') {
+        scrollUpBar.className = '';
+    }
+    else {
+        scrollUpBar.className = 'hide';
+    }
+    });
+        
+  
+
+
+

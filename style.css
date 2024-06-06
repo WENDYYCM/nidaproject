@@ -32,7 +32,7 @@ header{
     text-transform: uppercase;
 }
 
-.navlist a, .scroll-up-bar a{
+.navlist a, #scroll-up-link a{
     color: #7c0004;
     margin-left: 60px;
     font-size: 17px;
@@ -175,7 +175,11 @@ section {
     transform: translateY(-5px);
 }
 
-/*.scroll-up-bar {
+.hide {
+    display: none;
+}
+
+#scroll-up-link {
     position: absolute;
     width: 120px;
     height: 30px;
@@ -188,11 +192,11 @@ section {
     transition: all .55s ease;
 }
 
-.scroll-up-bar a {
+#scroll-up-link a {
     margin-left: 0;
     display: block;
     margin: 7px 0;
-}*/
+}
 
 
 @media screen and (max-width: 1460px) {
