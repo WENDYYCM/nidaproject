@@ -27,12 +27,12 @@ header{
     margin-right: 30px;
 }
 
-.navlist{
+.navlist, .price-tag{
     display: flex;
     text-transform: uppercase;
 }
 
-.navlist a, #scroll-up-link a{
+.navlist a, #scroll-up-link a, .price-tag a {
     color: #7c0004;
     margin-left: 60px;
     font-size: 17px;
@@ -41,7 +41,11 @@ header{
     transition: all .55s ease;
 }
 
-.navlist a:hover, #scroll-up-link a:hover {
+.navlist .no-margin, .price-tag a {
+    margin-left: 0px;
+}
+
+.navlist a:hover, #scroll-up-link a:hover, .price-tag a:hover {
     color:#cb1711;
     border-bottom: 2px solid #cb1711;
 }
@@ -94,7 +98,7 @@ section {
 
 .jewelery-text a {
     display: inline-block;
-    color:  #fdf2f9;
+    color:  hsl(322, 73%, 97%);
     background: #7c0004;
     border: 1px solid transparent;
     padding: 12px 30px;
@@ -199,6 +203,56 @@ section {
     width: 90px;
 }
 
+.price-tag {
+    display: inline-block;
+    
+    width: auto;
+    height: 38px;
+    
+    background: transparent;
+    border: 1px solid white;
+    -webkit-border-radius: 3px 4px 4px 3px;
+    -moz-border-radius: 3px 4px 4px 3px;
+    border-radius: 3px 4px 4px 3px;
+    
+    
+    position: relative;
+    
+    color: white;
+    line-height: 38px;
+  
+    padding: 0 10px 0 10px;
+  }
+  
+  /* Makes the triangle */
+  .price-tag:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -19px;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-right: 19px solid white;
+  }
+  
+  /* Makes the circle */
+  .price-tag:after {
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: -9px;
+    top: 17px;
+  }
+
+
+
+
 
 @media screen and (max-width: 1460px) {
     section {
@@ -240,7 +294,6 @@ section {
 
 
 }
-
 
 
 @media screen and (max-width: 1340px) {
